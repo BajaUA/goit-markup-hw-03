@@ -12,6 +12,20 @@ body {
   color: var(--main-text-color);
   background-color: var(--hero-color);
 }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
 .link {
   text-decoration: none;
 }
@@ -19,6 +33,24 @@ body {
   list-style-type: none;
 }
 
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .section-title {
   font-size: 36px;
   line-height: 1.11;
@@ -45,8 +77,16 @@ body {
 /** -----------------HEADER--------------- */
 
 .header {
+  padding: 24px 0;
 }
 .header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 76px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
 }
 .header-logo {
   font-family: 'Raleway', sans-serif;
@@ -61,6 +101,8 @@ body {
   color: var(--title-color);
 }
 .header-menu {
+  display: flex;
+  gap: 40px;
 }
 .header-menu-item {
 }
@@ -77,6 +119,8 @@ body {
   font-style: normal;
 }
 .header-address-list {
+  display: flex;
+  gap: 40px;
 }
 .header-address-link {
   line-height: 1.5;
@@ -91,12 +135,18 @@ body {
 .hero {
   background-color: var(--title-color);
 }
+.hero-container {
+  padding: 188px;
+}
 .hero-title {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: var(--hero-color);
   text-align: center;
+  max-width: 496px;
+  margin: 0 auto;
+  margin-bottom: 48px;
 }
 .hero-btn {
   font-family: inherit;
@@ -107,44 +157,75 @@ body {
   color: var(--hero-color);
   cursor: pointer;
   background: var(--main-brand-color);
+  border-radius: 4px;
+  border: none;
+  min-width: 196px;
+  padding: 16px 32px;
+  display: block;
+  margin: 0 auto;
 }
 .hero-btn:is(:hover, :focus) {
   background: var(--menu-active-color);
 }
+.benefits {
+  padding: 120px 0;
+}
 .benefits-list {
+  display: flex;
+  gap: 24px;
 }
 .benefits-item {
+  flex-basis: calc((100% - 24px * 3) 4);
 }
 .benefits-subtitle {
+  margin-bottom: 8px;
 }
 .benefits-item-text {
 }
 .doing {
+  padding-bottom: 120px;
 }
 .doing-title {
+  margin: 0 auto;
+  margin-bottom: 72px;
 }
 .doing-list {
+  display: flex;
+  gap: 24px;
 }
 .doing-item {
+  flex-basis: calc((100% -24px * 2) / 3);
 }
 .team {
+  padding: 120px 0;
   background-color: var(--footer-color);
 }
 .team-title {
+  margin-bottom: 72px;
 }
 .team-list {
+  display: flex;
+  gap: 24px;
 }
 .team-item {
   background-color: var(--hero-color);
+  flex-basis: calc((100% - 24px * 3) 4);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-subtitle {
+  margin-top: 32px;
+  margin-bottom: 8px;
+  text-align: center;
 }
 .team-text {
+  margin-bottom: 32px;
+  text-align: center;
 }
 
 /* *--------------------FOOTER------------- */
 .footer {
   background-color: var(--title-color);
+  padding: 100px 0;
 }
 .footer-logo {
   font-family: 'Raleway', sans-serif;
@@ -164,6 +245,8 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--footer-color);
+  margin-top: 17.5px;
+  max-width: 264px;
 }
 
 /** ---------------PORTFOLIO-MAIN------------------ */
@@ -171,6 +254,12 @@ body {
   background-color: var(--hero-color);
 }
 .products-btn-list {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 96px;
+  margin-bottom: 72px;
 }
 .products-btn {
   font-family: inherit;
@@ -182,19 +271,36 @@ body {
   color: var(--main-brand-color);
   cursor: pointer;
   background: var(--footer-color);
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
+  padding: 12px 24px;
 }
 .products-btn:is(:hover, :focus) {
   color: var(--hero-color);
   background: var(--menu-active-color);
+  border: 0px;
 }
 .products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 .products-item {
   background-color: var(--hero-color);
+  max-width: calc((100% -24 * 2) / 3);
 }
 .products-link {
 }
+
+.product-description {
+  padding-left: 16px;
+  border: 1px solid #e7e9fc;
+}
+
 .products-subtitle {
+  margin-top: 32px;
+  margin-bottom: 8px;
 }
 .products-text {
+  margin-bottom: 32px;
 }
