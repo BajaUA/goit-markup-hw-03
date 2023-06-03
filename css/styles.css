@@ -263,8 +263,8 @@ img {
 /** ---------------PORTFOLIO-MAIN------------------ */
 .products {
   background-color: var(--hero-color);
-  margin-top: 96px;
-  margin-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
 .products-btn-list {
   display: flex;
@@ -300,7 +300,7 @@ img {
 }
 .products-item {
   background-color: var(--hero-color);
-  max-width: calc((100% -24 * 2) / 3);
+  width: calc((100% - 48px) / 3);
 }
 
 .product-desc {
