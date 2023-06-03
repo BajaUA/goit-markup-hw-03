@@ -263,13 +263,14 @@ img {
 /** ---------------PORTFOLIO-MAIN------------------ */
 .products {
   background-color: var(--hero-color);
+  margin-top: 96px;
+  margin-bottom: 120px;
 }
 .products-btn-list {
   display: flex;
   margin: 0 auto;
   justify-content: center;
   gap: 24px;
-  margin-top: 96px;
   margin-bottom: 72px;
 }
 .products-btn {
@@ -289,27 +290,28 @@ img {
 .products-btn:is(:hover, :focus) {
   color: var(--hero-color);
   background: var(--menu-active-color);
-  border: 0px;
+  border: 1px solid transparent;
 }
 .products-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  row-gap: 48px;
+  column-gap: 24px;
 }
 .products-item {
   background-color: var(--hero-color);
   max-width: calc((100% -24 * 2) / 3);
 }
+
+.product-desc {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
 .products-link {
 }
 
-.product-description {
-  padding-left: 16px;
-  border: 1px solid #e7e9fc;
-}
-
 .products-subtitle {
-  margin-top: 32px;
   margin-bottom: 8px;
 }
 .products-text {
