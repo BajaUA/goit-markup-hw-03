@@ -65,7 +65,7 @@ img {
 
 .section-subtitle {
   font-weight: 500;
-  font-size: --main-font-size;
+  font-size: var(--main-font-size);
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-color);
@@ -80,7 +80,6 @@ img {
 /** -----------------HEADER--------------- */
 
 .header {
-  padding: 24px 0;
   border-bottom: 1px solid #e7e9fc;
 }
 .header-container {
@@ -118,6 +117,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--title-color);
+  display: block;
   padding: 24px 0;
 }
 .header-menu-link:is(:hover, :focus, :active) {
@@ -315,5 +315,4 @@ img {
   margin-bottom: 8px;
 }
 .products-text {
-  margin-bottom: 32px;
 }
